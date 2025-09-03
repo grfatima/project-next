@@ -7,17 +7,14 @@ import { HiMenu, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="w-full flex items-center justify-around px-6 py-4 relative z-50 bg-transparent">
-      {/* Logo */}
+    <nav className="fixed top-0 left-0 w-full h-24 sm:px-6 flex px-6 lg:px-26 items-center justify-between bg-[#0F0F0F]/80 backdrop-blur border-b border-[#1F1F1F] z-50">
       <Link href="/" className="flex items-center">
-        <Image src="/images/logo.png" alt="Logo" width={160} height={160} />
+        <Image src="/images/logo.png" alt="Logo" width={150} height={150} />
       </Link>
 
-      {/* Desktop Links */}
       <div className="hidden md:flex items-center bg-[#0F0F0F] rounded-xl border border-[#1F1F1F] text-white px-8 py-2 space-x-8">
         {[
           { href: "/", label: "Home" },
@@ -35,11 +32,9 @@ const Navbar = () => {
         ))}
       </div>
 
-      {/* Right Side */}
       <div className="flex items-center space-x-4 md:space-x-6">
         <IoSearchSharp className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 transition-transform" />
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white text-3xl focus:outline-none"
           onClick={toggleMenu}
@@ -48,7 +43,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-[#0F0F0F] border-t border-[#1F1F1F] px-6 py-6 flex flex-col space-y-6 md:hidden">
           {[

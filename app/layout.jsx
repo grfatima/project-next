@@ -1,5 +1,7 @@
+import Footer from "@/Components/Footer";
 import "../styles/globals.css";
 import Navbar from "@/components/Navbar/index.jsx";
+import App from "./page";
 
 export const metadata = {
   title: "Next.js",
@@ -10,15 +12,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="az">
       <body>
-        <div
-          className="w-screen h-screen bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/Sub.png')",
-          }}
-        >
-          <Navbar />
-          {children}
-        </div>
+   
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   );
