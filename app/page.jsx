@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import {
   FaMobileAlt,
   FaTabletAlt,
@@ -9,6 +8,7 @@ import {
   FaGamepad,
   FaVrCardboard,
 } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
 
 const categories = [
   { name: "Action", image: "/images/action.webp" },
@@ -119,13 +119,12 @@ const CategoriesAndDevices = () => {
 
   return (
     <div>
+      {/* Hero Section */}
       <div
         className="w-screen h-screen bg-cover bg-center relative"
-        style={{
-          backgroundImage: "url('/images/Sub.png')",
-        }}
+        style={{ backgroundImage: "url('/images/Sub.png')" }}
       >
-        <div className="px-6 lg:px-12 py-20 flex flex-col items-center justify-center text-center sm:py-24 md:py-20 space-y-4">
+        <div className="px-6 lg:px-[100px] py-20 flex flex-col items-center justify-center text-center sm:py-24 md:py-20 space-y-4">
           <h1 className="text-white text-2xl mt-80 lg:text-5xl font-bold">
             The Best Streaming Experience
           </h1>
@@ -141,7 +140,8 @@ const CategoriesAndDevices = () => {
         </div>
       </div>
 
-      <div className="px-6 lg:px-25 py-16 bg-[#141414] text-white">
+      <div className="px-6 lg:px-[100px] py-16 bg-[#141414] text-white">
+        {/* Categories Section */}
         <section className="mb-28">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Explore our wide variety of categories
@@ -167,7 +167,8 @@ const CategoriesAndDevices = () => {
           </div>
         </section>
 
-        <section>
+        {/* Devices Section */}
+        <section className="mb-28">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             We Provide you streaming experience across various devices.
           </h2>
@@ -193,8 +194,9 @@ const CategoriesAndDevices = () => {
           </div>
         </section>
 
-        <section>
-          <div className="mt-28">
+        {/* FAQ Section */}
+        <section className="mb-28">
+          <div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Frequently Asked Questions
             </h2>
@@ -219,7 +221,7 @@ const CategoriesAndDevices = () => {
               >
                 <div className="flex items-start justify-between gap-6">
                   <div className="flex items-center gap-6">
-                    <div className="bg-[#262626] border border-[#333333] w-16 h-16 rounded-md flex items-center justify-center text-white text-2xl">
+                    <div className="bg-[#1A1A1A] border border-[#262626] w-16 h-16 rounded-md flex items-center justify-center text-white text-2xl">
                       {faq.number}
                     </div>
                     <p className="text-xl font-medium">{faq.question}</p>
@@ -238,7 +240,8 @@ const CategoriesAndDevices = () => {
           </div>
         </section>
 
-        <section className="text-white py-20">
+        {/* Plans Section */}
+        <section className="mb-28">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -310,15 +313,15 @@ const CategoriesAndDevices = () => {
           </div>
         </section>
 
+        {/* Free Trial Section */}
         <section
-          className="relative bg-cover bg-center bg-no-repeat py-20 px-10 rounded-lg items-center justify-between max-w-7xl mx-auto border-1 border-[#262626]"
+          className="relative bg-cover bg-center bg-no-repeat py-20 px-10 rounded-lg items-center justify-between max-w-7xl mx-auto border border-[#262626]"
           style={{
             backgroundImage: "url('/images/Sub.png')",
             minHeight: "300px",
           }}
         >
           <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-
           <div className="relative max-w-4xl text-white">
             <h2 className="text-4xl font-bold mb-6">
               Start your free trial today!

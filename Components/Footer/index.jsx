@@ -3,8 +3,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#0F0F0F] text-gray-300  px-6 lg:px-25 py-16">
+    <footer className="w-full bg-[#0F0F0F] text-gray-300 px-6 lg:px-25 py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-6 gap-6 mb-10">
+        {/* Home Section */}
         <div>
           <h3 className="text-white font-semibold mb-4">Home</h3>
           <ul className="space-y-2 text-sm text-[#999999]">
@@ -31,6 +32,7 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* Movies Section */}
         <div>
           <h3 className="text-white font-semibold mb-4">Movies</h3>
           <ul className="space-y-2 text-sm text-[#999999]">
@@ -57,7 +59,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Section 3 */}
+        {/* Shows Section */}
         <div>
           <h3 className="text-white font-semibold mb-4">Shows</h3>
           <ul className="space-y-2 text-sm text-[#999999]">
@@ -84,6 +86,7 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* Support Section */}
         <div>
           <h3 className="text-white font-semibold mb-4">Support</h3>
           <ul className="space-y-2 text-sm text-[#999999]">
@@ -95,6 +98,7 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* Subscription Section */}
         <div>
           <h3 className="text-white font-semibold mb-4">Subscription</h3>
           <ul className="space-y-2 text-sm text-[#999999]">
@@ -111,6 +115,7 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* Connect Section */}
         <div>
           <h3 className="text-white font-semibold mb-4">Connect With Us</h3>
           <div className="flex space-x-4">
@@ -154,6 +159,7 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Footer Bottom */}
       <div className="max-w-7xl mx-auto border-t border-[#999999] pt-6 flex flex-col md:flex-row justify-between text-xs text-[#999999]">
         <p>©2023 StreamVib, All Rights Reserved</p>
         <div className="flex space-x-6 mt-2 md:mt-0">
