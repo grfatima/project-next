@@ -161,7 +161,7 @@ const CategoriesAndDevices = () => {
       {/* Hero Section */}
       <div
         className="w-screen h-screen bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/images/Sub.png')" }}
+        style={{ backgroundImage: "url('/images/logo/Sub.png')" }}
       >
         <div className="px-6 lg:px-[100px] py-20 flex flex-col items-center justify-center text-center sm:py-24 md:py-20 space-y-4">
           <h1 className="text-white text-2xl mt-80 lg:text-5xl font-bold">
@@ -410,7 +410,7 @@ const CategoriesAndDevices = () => {
         <section
           className="relative bg-cover bg-center bg-no-repeat py-20 px-10 rounded-lg items-center justify-between max-w-7xl mx-auto border border-[#262626]"
           style={{
-            backgroundImage: "url('/images/Sub.png')",
+            backgroundImage: "url('/images/logo/Sub.png')",
             minHeight: "300px",
           }}
         >

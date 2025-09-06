@@ -126,7 +126,7 @@ const Footer = () => {
               className="bg-[#1A1A1A] border border-[#262626] p-2 rounded hover:border-red-600 transition"
             >
               <img
-                src="/images/facebook.png"
+                src="/images/contact/facebook.png"
                 alt="Facebook"
                 className="w-5 h-5"
               />
@@ -138,7 +138,7 @@ const Footer = () => {
               className="bg-[#1A1A1A] border border-[#262626] p-2 rounded hover:border-red-600 transition"
             >
               <img
-                src="/images/twitter.png"
+                src="/images/contact/twitter.png"
                 alt="Twitter"
                 className="w-5 h-5"
               />
@@ -150,7 +150,7 @@ const Footer = () => {
               className="bg-[#1A1A1A] border border-[#262626] p-2 rounded hover:border-red-600 transition"
             >
               <img
-                src="/images/linkedin.png"
+                src="/images/contact/linkedin.png"
                 alt="LinkedIn"
                 className="w-5 h-5"
               />

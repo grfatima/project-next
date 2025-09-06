@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full h-24 sm:px-6 flex px-6 lg:px-26 items-center justify-between bg-[#0F0F0F]/80 backdrop-blur border-b border-[#1F1F1F] z-50">
       {/* Logo */}
       <Link href="/" className="flex items-center">
-        <Image src="/images/logo.png" alt="Logo" width={150} height={150} />
+        <Image src="/images/logo/logo.png" alt="Logo" width={150} height={150} />
       </Link>
 
       {/* Desktop Links */}

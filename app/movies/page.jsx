@@ -107,6 +107,99 @@ const top = [
   },
 ];
 
+const popular2 = [
+  {
+    id: 1,
+    title: "Wednesday",
+    image: "/images/shows/popular/1.webp",
+    rating: 8.4,
+    released: "2022-11-23",
+  },
+  {
+    id: 2,
+    title: "The Summer I Turned Pretty",
+    image: "/images/shows/popular/2.webp",
+    rating: 8.16,
+    released: "2022-06-16",
+  },
+  {
+    id: 3,
+    title: "Dan Da Dan",
+    image: "/images/shows/popular/3.webp",
+    rating: 8.6,
+    released: "2024-10-04",
+  },
+  {
+    id: 4,
+    title: "Squid Game",
+    image: "/images/shows/popular/4.webp",
+    rating: 7.86,
+    released: "2021-09-17",
+  },
+];
+
+const air = [
+  {
+    id: 1,
+    title: "The Terminal List: Dark Wolf",
+    image: "/images/shows/air/1.webp",
+    rating: 7.55,
+    released: "2025-08-27",
+  },
+  {
+    id: 2,
+    title: "Dexter: Resurrection",
+    image: "/images/shows/air/2.webp",
+    rating: 8.84,
+    released: "2025-07-13",
+  },
+  {
+    id: 3,
+    title: "Foundation",
+    image: "/images/shows/air/3.webp",
+    rating: 7.74,
+    released: "2021-09-23",
+  },
+  {
+    id: 4,
+    title: "NCIS: Tony & Ziva",
+    image: "/images/shows/air/4.webp",
+    rating: 9.0,
+    released: "2025-09-04",
+  },
+];
+
+const top2 = [
+  {
+    id: 1,
+    title: "When Life Gives You Tangerines",
+    image: "/images/shows/top/1.webp",
+    rating: 8.77,
+    released: "2025-03-07",
+  },
+  {
+    id: 2,
+    title: "Breaking Bad",
+    image: "/images/shows/top/2.webp",
+    rating: 8.54,
+    released: "2008-01-20",
+  },
+  {
+    id: 3,
+    title: "Chernobyl",
+    image: "/images/shows/top/3.webp",
+    rating: 8.49,
+    released: "2019-05-06",
+  },
+  {
+    id: 4,
+    title: "Anne with an E",
+    image: "/images/shows/top/4.webp",
+    rating: 8.66,
+    released: "2017-03-19",
+  },
+];
+
 const Movies = () => {
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -500,7 +593,7 @@ const Movies = () => {
             id="popularScroll"
             className="flex gap-10 overflow-x-auto scrollbar-hide px-2 scroll-smooth"
           >
-            {popular.map((movie) => (
+            {popular2.map((movie) => (
               <Link
                 key={movie.id}
                 href={`/movie/${movie.id}`}
@@ -532,10 +625,10 @@ const Movies = () => {
           </div>
         </section>
 
-        {/* Upcoming Section */}
+        {/* On The Air Section */}
         <section className="mb-25">
           <div className="flex items-center justify-between mb-8 px-4">
-            <h2 className="text-3xl font-semibold mb-5">Upcoming</h2>
+            <h2 className="text-3xl font-semibold mb-5">On The Air</h2>
 
             {/* Oxlar */}
             <div className="flex items-center border border-[#333] mb-5 bg-[#0F0F0F] rounded-sm overflow-hidden">
@@ -566,7 +659,7 @@ const Movies = () => {
             id="upcomingScroll"
             className="flex gap-10 overflow-x-auto scrollbar-hide px-2 scroll-smooth"
           >
-            {upcoming.map((movie) => (
+            {air.map((movie) => (
               <Link
                 key={movie.id}
                 href={`/movie/${movie.id}`}
@@ -632,7 +725,7 @@ const Movies = () => {
             id="topRatedScroll"
             className="flex gap-10 overflow-x-auto scrollbar-hide px-2 scroll-smooth"
           >
-            {top.map((movie) => (
+            {top2.map((movie) => (
               <Link
                 key={movie.id}
                 href={`/movie/${movie.id}`}
@@ -665,12 +758,12 @@ const Movies = () => {
         </section>
       </div>
 
-      {/* Subscription Section */}
+      {/* Free Trial Section */}
       <div className="px-9 lg:px-14 mt-20">
         <section
           className="relative bg-cover bg-center bg-no-repeat py-20 px-10 rounded-lg items-center justify-between max-w-7xl mx-auto border-1 border-[#262626]"
           style={{
-            backgroundImage: "url('/images/Sub.png')",
+            backgroundImage: "url('/images/logo/Sub.png')",
             minHeight: "300px",
           }}
         >
