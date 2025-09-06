@@ -14,139 +14,96 @@ import { useRouter } from "next/navigation";
 import { FiPlus, FiThumbsUp } from "react-icons/fi";
 import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
 
-const genres = [
+const popular = [
   {
     id: 1,
-    title: "Adventure",
-    images: [
-      "/images/genres/Image.png",
-      "/images/genres/Image(1).png",
-      "/images/genres/Image(2).png",
-      "/images/genres/Image(3).png",
-    ],
+    title: "War of the Worlds",
+    image: "/images/movies/popular/1.webp",
+    rating: 4.33,
+    released: "2025-07-29",
   },
   {
     id: 2,
-    title: "Comedy",
-    images: [
-      "/images/genres/Image(4).png",
-      "/images/genres/Image(5).png",
-      "/images/genres/Image(6).png",
-      "/images/genres/Image(7).png",
-    ],
+    title: "Nobody 2",
+    image: "/images/movies/popular/2.webp",
+    rating: 7.17,
+    released: "2025-08-13",
   },
   {
     id: 3,
-    title: "Drama",
-    images: [
-      "/images/genres/Image(8).png",
-      "/images/genres/Image(9).png",
-      "/images/genres/Image(10).png",
-      "/images/genres/Image(11).png",
-    ],
+    title: "The Naked Gun",
+    image: "/images/movies/popular/3.webp",
+    rating: 6.78,
+    released: "2025-07-30",
   },
   {
     id: 4,
-    title: "Horror",
-    images: [
-      "/images/genres/Image(12).png",
-      "/images/genres/Image(13).png",
-      "/images/genres/Image(14).png",
-      "/images/genres/Image(15).png",
-    ],
+    title: "F1",
+    image: "/images/movies/popular/4.webp",
+    rating: 7.82,
+    released: "2025-06-25",
   },
 ];
 
-const trendingNow = [
+const upcoming = [
   {
     id: 1,
-    title: "Morbius",
-    image: "/images/trend/1.png",
-    time: "1h 30m",
-    views: "2K",
+    title: "The Conjuring: Last Rites",
+    image: "/images/upcoming/1.webp",
+    rating: 7.22,
+    released: "2025-09-03",
   },
   {
     id: 2,
-    title: "Bhai Jaan",
-    image: "/images/trend/2.png",
-    time: "1h 57m",
-    views: "1.5K",
+    title: "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+    image: "/images/upcoming/2.webp",
+    rating: 7.31,
+    released: "2025-07-18",
   },
   {
     id: 3,
-    title: "Sura",
-    image: "/images/trend/3.svg",
-    time: "2h 10m",
-    views: "1.8K",
+    title: "Together",
+    image: "/images/upcoming/3.webp",
+    rating: 7.13,
+    released: "2025-07-23",
   },
   {
     id: 4,
-    title: "Pathaan",
-    image: "/images/trend/4.svg",
-    time: "2h 20m",
-    views: "3K",
+    title: "The Bad Guys 2",
+    image: "/images/upcoming/4.webp",
+    rating: 7.77,
+    released: "2025-07-24",
   },
 ];
 
-const newReleases = [
+const top = [
   {
     id: 1,
-    title: "Adipurush",
-    image: "/images/relases/img(1).png",
-    released: "14 April 2023",
+    title: "The Shawshank Redemption",
+    image: "/images/top/1.webp",
+    rating: 8.71,
+    released: "1994-09-23",
   },
   {
     id: 2,
-    title: "KGF",
-    image: "/images/relases/img(2).png",
-    released: "22 April 2023",
+    title: "Spirited Away",
+    image: "/images/top/2.webp",
+    rating: 8.54,
+    released: "2001-07-20",
   },
   {
     id: 3,
-    title: "Sin City",
-    image: "/images/relases/img(3).png",
-    released: "13 April 2023",
+    title: "Blade The Lord of the Rings: The Return of the King 2049",
+    image: "/images/top/3.webp",
+    rating: 8.49,
+    released: "2003-12-17",
   },
   {
     id: 4,
-    title: "Tomorrow War",
-    image: "/images/relases/img(4).png",
-    released: "19 April 2023",
-  },
-];
-
-const mustWatch = [
-  {
-    id: 1,
-    title: "Kantara",
-    image: "/images/shows/im.png",
-    time: "1h 57m",
-    views: "20K",
-    rating: 5,
-  },
-  {
-    id: 2,
-    title: "Pushpa",
-    image: "/images/shows/im1.png",
-    time: "1h 50m",
-    views: "25K",
-    rating: 4,
-  },
-  {
-    id: 3,
-    title: "Blade Runner 2049",
-    image: "/images/shows/im2.png",
-    time: "1h 42m",
-    views: "30K",
-    rating: 5,
-  },
-  {
-    id: 4,
-    title: "Adipurush",
-    image: "/images/shows/im3.png",
-    time: "2h 10m",
-    views: "20K",
-    rating: 4,
+    title: "Interstellar",
+    image: "/images/top/4.webp",
+    rating: 8.46,
+    released: "2014-11-05",
   },
 ];
 
@@ -288,9 +245,10 @@ const Movies = () => {
         </div>
       </div>
 
-      {/* Genres Section */}
+      {/* MOVIES */}
       <div className="relative max-w-7xl mx-6 lg:mx-14 my-20 bg-[#141414] text-white border border-[#333333] rounded-xl p-6">
-        <div className="absolute -top-4 left-30 -translate-x-1/2">
+        {/* Movies Button */}
+        <div className="absolute -top-4 left-20 -translate-x-1/2">
           <Link href="/movies">
             <span className="bg-red-600 px-5 py-4 rounded-md text-sm font-semibold cursor-pointer hover:bg-red-700 transition">
               Movies
@@ -298,133 +256,408 @@ const Movies = () => {
           </Link>
         </div>
 
-        <section className="mb-20 mt-10">
-          <h2 className="text-3xl font-semibold mb-8 ml-13">Our Genres</h2>
-          <div className="flex gap-10 overflow-x-auto scrollbar-hide px-2 justify-center">
-            {genres.map((genre) => (
-              <Link
-                key={genre.id}
-                href={`/genre/${genre.id}`} // klikləyəndə bu səhifəyə yönləndirəcək
-                className="min-w-[200px] h-[250px] relative rounded-lg overflow-hidden border border-[#262626] p-2 flex flex-col justify-between cursor-pointer bg-[#1a1a1a]"
-              >
-                <div className="grid grid-cols-2 grid-rows-2 gap-1 flex-grow px-3 py-3">
-                  {genre.images.map((img, idx) => (
-                    <div
-                      key={`${genre.id}-${idx}`}
-                      className="relative w-full h-full rounded-md overflow-hidden"
-                    >
-                      <Image
-                        src={img}
-                        alt={`${genre.title} ${idx + 1}`}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-                <div className="text-center mt-2">
-                  <span className="text-white font-semibold text-sm block mb-2">
-                    {genre.title}
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
+        {/* Popular Section */}
+        <section className="mb-25 mt-10">
+          <div className="flex items-center justify-between mb-8 px-4">
+            <h2 className="text-3xl font-semibold mb-5">Popular</h2>
 
-        {/* Trending Section */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-semibold mb-8 ml-13">Trending Now</h2>
-          <div className="flex gap-10 overflow-x-auto scrollbar-hide justify-center">
-            {trendingNow.map((movie) => (
+            {/* Oxlar */}
+            <div className="flex items-center border mb-5 border-[#333] bg-[#0F0F0F] rounded-sm overflow-hidden">
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("popularScroll")
+                    .scrollBy({ left: -300, behavior: "smooth" })
+                }
+                className="px-6 py-3 m-2 rounded-sm text-lg  font-medium  text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronBackOutline size={20} />
+              </button>
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("popularScroll")
+                    .scrollBy({ left: 300, behavior: "smooth" })
+                }
+                className="px-6 py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronForwardOutline size={20} />
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="popularScroll"
+            className="flex gap-10 overflow-x-auto scrollbar-hide px-2 scroll-smooth"
+          >
+            {popular.map((movie) => (
               <Link
                 key={movie.id}
                 href={`/movie/${movie.id}`}
-                className="min-w-[200px] rounded-lg overflow-hidden border border-[#262626] cursor-pointer bg-[#1a1a1a] flex flex-col"
+                className="relative min-w-[220px] flex flex-col cursor-pointer group"
               >
-                <div className="relative w-full h-[250px]">
+                <div className="relative w-full h-[330px] rounded-2xl overflow-hidden border border-[#262626]">
                   <Image
                     src={movie.image}
                     alt={movie.title}
                     fill
-                    className="object-cover rounded-3xl px-3 py-3"
+                    className="object-cover"
                   />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300"></div>
                 </div>
-                <div className="flex justify-between items-center text-sm text-[#999999] mb-2 px-3 py-2">
-                  <span className="flex items-center gap-1 bg-[#141414] border border-[#262626] rounded-xl px-2">
-                    <HiOutlineClock className="text-[#999999]" /> {movie.time}
-                  </span>
-                  <span className="flex items-center gap-1 bg-[#141414] border border-[#262626] rounded-xl px-2">
-                    <HiOutlineEye className="text-[#999999]" /> {movie.views}
-                  </span>
+
+                <div className="mt-3">
+                  <h3 className="text-white font-semibold text-base truncate">
+                    {movie.title}
+                  </h3>
+                  <div className="flex items-center justify-between text-sm mt-1">
+                    <span className="flex items-center gap-1 text-red-500 font-medium">
+                      ★ {movie.rating}
+                    </span>
+                    <span className="text-[#999999]">{movie.released}</span>
+                  </div>
                 </div>
               </Link>
             ))}
           </div>
         </section>
 
-        {/* New Releases Section */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-semibold mb-8 ml-13">New Releases</h2>
-          <div className="flex gap-10 overflow-x-auto scrollbar-hide px-2 justify-center">
-            {newReleases.map((movie) => (
+        {/* Upcoming Section */}
+        <section className="mb-25">
+          <div className="flex items-center justify-between mb-8 px-4">
+            <h2 className="text-3xl font-semibold mb-5">Upcoming</h2>
+
+            {/* Oxlar */}
+            <div className="flex items-center border border-[#333] mb-5 bg-[#0F0F0F] rounded-sm overflow-hidden">
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("upcomingScroll")
+                    .scrollBy({ left: -300, behavior: "smooth" })
+                }
+                className="px-6 py-3 m-2 rounded-sm text-lg font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronBackOutline size={20} />
+              </button>
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("upcomingScroll")
+                    .scrollBy({ left: 300, behavior: "smooth" })
+                }
+                className="px-6 py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronForwardOutline size={20} />
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="upcomingScroll"
+            className="flex gap-10 overflow-x-auto scrollbar-hide px-2 scroll-smooth"
+          >
+            {upcoming.map((movie) => (
               <Link
                 key={movie.id}
                 href={`/movie/${movie.id}`}
-                className="min-w-[200px] flex flex-col items-center rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#262626]"
+                className="relative min-w-[220px] flex flex-col cursor-pointer group"
               >
-                <Image
-                  src={movie.image}
-                  alt={movie.title}
-                  width={200}
-                  height={250}
-                  className="object-cover rounded-3xl px-3 py-3"
-                />
-                <span className="mb-4 mt-2 text-xs text-[#999999] bg-[#141414] border border-[#262626] rounded-xl py-1 px-5">
-                  Released {movie.released}
-                </span>
+                <div className="relative w-full h-[330px] rounded-2xl overflow-hidden border border-[#262626]">
+                  <Image
+                    src={movie.image}
+                    alt={movie.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300"></div>
+                </div>
+
+                <div className="mt-3">
+                  <h3 className="text-white font-semibold text-base truncate">
+                    {movie.title}
+                  </h3>
+                  <div className="flex items-center justify-between text-sm mt-1">
+                    <span className="flex items-center gap-1 text-red-500 font-medium">
+                      ★ {movie.rating}
+                    </span>
+                    <span className="text-[#999999]">{movie.released}</span>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
         </section>
 
-        {/* Must-Watch Section */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-semibold mb-8 ml-13">
-            Must-Watch Movies
-          </h2>
-          <div className="flex gap-9 overflow-x-auto scrollbar-hide px-2 justify-center">
-            {mustWatch.map((movie) => (
+        {/* Top Rated Section */}
+        <section className="mb-5">
+          <div className="flex items-center justify-between mb-8 px-4">
+            <h2 className="text-3xl font-semibold mb-5">Top Rated</h2>
+
+            {/* Oxlar */}
+            <div className="flex items-center border border-[#333] mb-5 bg-[#0F0F0F] rounded-sm overflow-hidden">
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("topRatedScroll")
+                    .scrollBy({ left: -300, behavior: "smooth" })
+                }
+                className="px-6 py-3 m-2 rounded-sm text-lg font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronBackOutline size={20} />
+              </button>
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("topRatedScroll")
+                    .scrollBy({ left: 300, behavior: "smooth" })
+                }
+                className="px-6 py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronForwardOutline size={20} />
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="topRatedScroll"
+            className="flex gap-10 overflow-x-auto scrollbar-hide px-2 scroll-smooth"
+          >
+            {top.map((movie) => (
               <Link
                 key={movie.id}
                 href={`/movie/${movie.id}`}
-                className="min-w-[200px] flex flex-col items-center rounded-lg overflow-hidden border border-[#262626] bg-[#1a1a1a]"
+                className="relative min-w-[220px] flex flex-col cursor-pointer group"
               >
-                {/* Movie Image */}
-                <Image
-                  src={movie.image}
-                  alt={movie.title || "Movie Image"}
-                  width={200}
-                  height={250}
-                  className="object-cover rounded-3xl px-3 py-3"
-                />
+                <div className="relative w-full h-[330px] rounded-2xl overflow-hidden border border-[#262626]">
+                  <Image
+                    src={movie.image}
+                    alt={movie.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300"></div>
+                </div>
 
-                {/* Info under the image */}
-                <div className="flex justify-between items-center w-full px-3 mt-2 text-xs mb-4 text-[#999999]">
-                  {/* Time with clock icon */}
-                  <span className="flex items-center gap-1 bg-[#141414] border border-[#262626] rounded-xl px-2 py-1">
-                    <HiOutlineClock className="text-[#999999]" /> {movie.time}
-                  </span>
+                <div className="mt-3">
+                  <h3 className="text-white font-semibold text-base truncate">
+                    {movie.title}
+                  </h3>
+                  <div className="flex items-center justify-between text-sm mt-1">
+                    <span className="flex items-center gap-1 text-red-500 font-medium">
+                      ★ {movie.rating}
+                    </span>
+                    <span className="text-[#999999]">{movie.released}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      </div>
 
-                  {/* Views with stars */}
-                  <span
-                    className="flex items-center  bg-[#141414] border border-[#262626] rounded-xl px-1 py-1
-                  "
-                  >
-                    {"★".repeat(movie.rating)}
-                    {"☆".repeat(5 - movie.rating)}
-                    {movie.views}
-                  </span>
+      {/* SHOWS */}
+      <div className="relative max-w-7xl mx-6 lg:mx-14 my-20 bg-[#141414] text-white border border-[#333333] rounded-xl p-6">
+        {/* Movies Button */}
+        <div className="absolute -top-4 left-20 -translate-x-1/2">
+          <Link href="/movies">
+            <span className="bg-red-600 px-5 py-4 rounded-md text-sm font-semibold cursor-pointer hover:bg-red-700 transition">
+              TV Shows
+            </span>
+          </Link>
+        </div>
+
+        {/* Popular Section */}
+        <section className="mb-25 mt-10">
+          <div className="flex items-center justify-between mb-8 px-4">
+            <h2 className="text-3xl font-semibold mb-5">Popular</h2>
+
+            {/* Oxlar */}
+            <div className="flex items-center border mb-5 border-[#333] bg-[#0F0F0F] rounded-sm overflow-hidden">
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("popularScroll")
+                    .scrollBy({ left: -300, behavior: "smooth" })
+                }
+                className="px-6 py-3 m-2 rounded-sm text-lg  font-medium  text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronBackOutline size={20} />
+              </button>
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("popularScroll")
+                    .scrollBy({ left: 300, behavior: "smooth" })
+                }
+                className="px-6 py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronForwardOutline size={20} />
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="popularScroll"
+            className="flex gap-10 overflow-x-auto scrollbar-hide px-2 scroll-smooth"
+          >
+            {popular.map((movie) => (
+              <Link
+                key={movie.id}
+                href={`/movie/${movie.id}`}
+                className="relative min-w-[220px] flex flex-col cursor-pointer group"
+              >
+                <div className="relative w-full h-[330px] rounded-2xl overflow-hidden border border-[#262626]">
+                  <Image
+                    src={movie.image}
+                    alt={movie.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300"></div>
+                </div>
+
+                <div className="mt-3">
+                  <h3 className="text-white font-semibold text-base truncate">
+                    {movie.title}
+                  </h3>
+                  <div className="flex items-center justify-between text-sm mt-1">
+                    <span className="flex items-center gap-1 text-red-500 font-medium">
+                      ★ {movie.rating}
+                    </span>
+                    <span className="text-[#999999]">{movie.released}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Upcoming Section */}
+        <section className="mb-25">
+          <div className="flex items-center justify-between mb-8 px-4">
+            <h2 className="text-3xl font-semibold mb-5">Upcoming</h2>
+
+            {/* Oxlar */}
+            <div className="flex items-center border border-[#333] mb-5 bg-[#0F0F0F] rounded-sm overflow-hidden">
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("upcomingScroll")
+                    .scrollBy({ left: -300, behavior: "smooth" })
+                }
+                className="px-6 py-3 m-2 rounded-sm text-lg font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronBackOutline size={20} />
+              </button>
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("upcomingScroll")
+                    .scrollBy({ left: 300, behavior: "smooth" })
+                }
+                className="px-6 py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronForwardOutline size={20} />
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="upcomingScroll"
+            className="flex gap-10 overflow-x-auto scrollbar-hide px-2 scroll-smooth"
+          >
+            {upcoming.map((movie) => (
+              <Link
+                key={movie.id}
+                href={`/movie/${movie.id}`}
+                className="relative min-w-[220px] flex flex-col cursor-pointer group"
+              >
+                <div className="relative w-full h-[330px] rounded-2xl overflow-hidden border border-[#262626]">
+                  <Image
+                    src={movie.image}
+                    alt={movie.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300"></div>
+                </div>
+
+                <div className="mt-3">
+                  <h3 className="text-white font-semibold text-base truncate">
+                    {movie.title}
+                  </h3>
+                  <div className="flex items-center justify-between text-sm mt-1">
+                    <span className="flex items-center gap-1 text-red-500 font-medium">
+                      ★ {movie.rating}
+                    </span>
+                    <span className="text-[#999999]">{movie.released}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Top Rated Section */}
+        <section className="mb-5">
+          <div className="flex items-center justify-between mb-8 px-4">
+            <h2 className="text-3xl font-semibold mb-5">Top Rated</h2>
+
+            {/* Oxlar */}
+            <div className="flex items-center border border-[#333] mb-5 bg-[#0F0F0F] rounded-sm overflow-hidden">
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("topRatedScroll")
+                    .scrollBy({ left: -300, behavior: "smooth" })
+                }
+                className="px-6 py-3 m-2 rounded-sm text-lg font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronBackOutline size={20} />
+              </button>
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("topRatedScroll")
+                    .scrollBy({ left: 300, behavior: "smooth" })
+                }
+                className="px-6 py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronForwardOutline size={20} />
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="topRatedScroll"
+            className="flex gap-10 overflow-x-auto scrollbar-hide px-2 scroll-smooth"
+          >
+            {top.map((movie) => (
+              <Link
+                key={movie.id}
+                href={`/movie/${movie.id}`}
+                className="relative min-w-[220px] flex flex-col cursor-pointer group"
+              >
+                <div className="relative w-full h-[330px] rounded-2xl overflow-hidden border border-[#262626]">
+                  <Image
+                    src={movie.image}
+                    alt={movie.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300"></div>
+                </div>
+
+                <div className="mt-3">
+                  <h3 className="text-white font-semibold text-base truncate">
+                    {movie.title}
+                  </h3>
+                  <div className="flex items-center justify-between text-sm mt-1">
+                    <span className="flex items-center gap-1 text-red-500 font-medium">
+                      ★ {movie.rating}
+                    </span>
+                    <span className="text-[#999999]">{movie.released}</span>
+                  </div>
                 </div>
               </Link>
             ))}

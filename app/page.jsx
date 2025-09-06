@@ -8,14 +8,53 @@ import {
   FaGamepad,
   FaVrCardboard,
 } from "react-icons/fa";
-import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-const categories = [
-  { name: "Action", image: "/images/action.webp" },
-  { name: "Adventure", image: "/images/advanture.webp" },
-  { name: "Comedy", image: "/images/comedy.png" },
-  { name: "Drama", image: "/images/drama.jpg" },
-  { name: "Horror", image: "/images/Horror.webp" },
+import React, { useState, useEffect } from "react";
+import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
+
+const genres = [
+  {
+    id: 1,
+    title: "Adventure",
+    images: [
+      "/images/genres/Image.png",
+      "/images/genres/Image(1).png",
+      "/images/genres/Image(2).png",
+      "/images/genres/Image(3).png",
+    ],
+  },
+  {
+    id: 2,
+    title: "Comedy",
+    images: [
+      "/images/genres/Image(4).png",
+      "/images/genres/Image(5).png",
+      "/images/genres/Image(6).png",
+      "/images/genres/Image(7).png",
+    ],
+  },
+  {
+    id: 3,
+    title: "Drama",
+    images: [
+      "/images/genres/Image(8).png",
+      "/images/genres/Image(9).png",
+      "/images/genres/Image(10).png",
+      "/images/genres/Image(11).png",
+    ],
+  },
+  {
+    id: 4,
+    title: "Horror",
+    images: [
+      "/images/genres/Image(12).png",
+      "/images/genres/Image(13).png",
+      "/images/genres/Image(14).png",
+      "/images/genres/Image(15).png",
+    ],
+  },
 ];
 
 const devices = [
@@ -142,27 +181,81 @@ const CategoriesAndDevices = () => {
 
       <div className="px-6 lg:px-[100px] py-16 bg-[#141414] text-white">
         {/* Categories Section */}
-        <section className="mb-28">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Explore our wide variety of categories
-          </h2>
-          <p className="text-[#999999] text-lg mb-10">
-            Whether you’re looking for a comedy to make you laugh, a drama to
-            make you think, or a documentary to learn something new.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
-            {categories.map((category) => (
-              <div
-                key={category.name}
-                className="bg-[#111] rounded-lg p-6 flex flex-col items-center transition"
+        <section className="mb-30 mt-10">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-15 gap-4">
+            <div className="flex-1">
+              <h2 className="text-3xl lg:text-4xl font-bold">
+                Explore our wide variety of categories
+              </h2>
+              <p className="text-[#999999] text-md mt-2 max-w-xxl">
+                Whether you’re looking for a comedy to make you laugh, a drama
+                to make you think, or a documentary to learn something new
+              </p>
+            </div>
+
+            {/* Oxlar */}
+            <div className="flex items-center border border-[#333] bg-[#0F0F0F] rounded-sm overflow-hidden">
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("genresScroll")
+                    .scrollBy({ left: -300, behavior: "smooth" })
+                }
+                className="px-4 py-2 md:px-6 md:py-3 m-2 rounded-sm text-lg font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
               >
-                <img
-                  src={category.image}
-                  alt={category.name}
-                  className="w-full h-55 object-cover rounded-lg mb-4"
-                />
-                <span className="text-lg font-semibold">{category.name}</span>
-              </div>
+                <IoChevronBackOutline size={20} />
+              </button>
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("genresScroll")
+                    .scrollBy({ left: 300, behavior: "smooth" })
+                }
+                className="px-4 py-2 md:px-6 md:py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+              >
+                <IoChevronForwardOutline size={20} />
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="genresScroll"
+            className="flex gap-15 overflow-x-auto scrollbar-hide px-2 scroll-smooth"
+          >
+            {genres.map((genre) => (
+              <Link
+                key={genre.id}
+                href={`/genre/${genre.id}`}
+                className="relative min-w-[220px] h-[300px] flex  flex-col cursor-pointer group rounded-2xl overflow-hidden border border-[#262626] bg-[#1a1a1a]"
+              >
+                {/* Şəkillər 2x2 */}
+                <div className="grid grid-cols-2 grid-rows-2 gap-2 w-full h-[250px] p-2">
+                  {genre.images.map((img, idx) => (
+                    <div
+                      key={idx}
+                      className="relative w-full h-full rounded-lg overflow-hidden"
+                    >
+                      <Image
+                        src={img}
+                        alt={`${genre.title} ${idx + 1}`}
+                        width={100}
+                        height={100}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300 rounded-2xl"></div>
+
+                {/* Genre Başlığı */}
+                <div className="absolute bottom-4 w-full text-center z-10 px-3">
+                  <span className="text-white font-semibold text-sm">
+                    {genre.title}
+                  </span>
+                </div>
+              </Link>
             ))}
           </div>
         </section>
@@ -216,12 +309,12 @@ const CategoriesAndDevices = () => {
             {faqs.map((faq, index) => (
               <div
                 key={faq.number}
-                className="border-t border-[#660000] py-6 cursor-pointer"
+                className="border-t border-[#660000] py-3 cursor-pointer"
                 onClick={() => toggleFaq(index)}
               >
                 <div className="flex items-start justify-between gap-6">
                   <div className="flex items-center gap-6">
-                    <div className="bg-[#1A1A1A] border border-[#262626] w-16 h-16 rounded-md flex items-center justify-center text-white text-2xl">
+                    <div className="bg-[#1A1A1A] border border-[#262626] w-16 h-16 rounded-md flex items-center justify-center text-white text-xl">
                       {faq.number}
                     </div>
                     <p className="text-xl font-medium">{faq.question}</p>
