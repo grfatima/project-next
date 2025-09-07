@@ -99,7 +99,7 @@ const Support = () => {
 
   return (
     <main className="bg-[#141414] text-white px-6 lg:px-10 py-16 space-y-20">
-      {/* Section 1 - Başlıq + Mətn + Şəkil */}
+      {/* Section 1 */}
       <section className="lg:px-16 px-10 py-10 mx-auto flex mt-10 flex-col space-y-6">
         <h1 className="text-3xl lg:text-4xl font-bold text-left">
           Welcome to our support page!
@@ -139,7 +139,7 @@ const Support = () => {
               value={formData.firstName}
               onChange={handleChange}
               onKeyDown={(e) => handleKeyDown(e, lastNameRef)}
-              className="bg-[#141414] border border-[#333] rounded-lg px-4 py-3 focus:outline-none focus:border-red-500"
+              className="bg-[#141414] cursor-pointer border border-[#333] rounded-lg px-4 py-3 focus:outline-none focus:border-red-500"
             />
           </div>
 
@@ -154,7 +154,7 @@ const Support = () => {
               ref={lastNameRef}
               onChange={handleChange}
               onKeyDown={(e) => handleKeyDown(e, emailRef)}
-              className="bg-[#141414] border border-[#333] rounded-lg px-4 py-3 focus:outline-none focus:border-red-500"
+              className="bg-[#141414] cursor-pointer border border-[#333] rounded-lg px-4 py-3 focus:outline-none focus:border-red-500"
             />
           </div>
 
@@ -169,7 +169,7 @@ const Support = () => {
               ref={emailRef}
               onChange={handleChange}
               onKeyDown={(e) => handleKeyDown(e, phoneRef)}
-              className="bg-[#141414] border border-[#333] rounded-lg px-4 py-3 focus:outline-none focus:border-red-500"
+              className="bg-[#141414] cursor-pointer border border-[#333] rounded-lg px-4 py-3 focus:outline-none focus:border-red-500"
             />
           </div>
 
@@ -184,13 +184,13 @@ const Support = () => {
               ref={phoneRef}
               onChange={handleChange}
               onKeyDown={(e) => handleKeyDown(e, messageRef)}
-              className="bg-[#141414] border border-[#333] rounded-lg px-4 py-3 focus:outline-none focus:border-red-500"
+              className="bg-[#141414] border cursor-pointer border-[#333] rounded-lg px-4 py-3 focus:outline-none focus:border-red-500"
             />
           </div>
 
           {/* Message */}
           <div className="flex flex-col lg:col-span-2">
-            <label className="text-sm mb-2">Message</label>
+            <label className="text-sm mb-2 ">Message</label>
             <textarea
               name="message"
               placeholder="Enter your Message"
@@ -198,18 +198,18 @@ const Support = () => {
               value={formData.message}
               ref={messageRef}
               onChange={handleChange}
-              className="bg-[#141414] border border-[#333] rounded-lg px-4 py-3 focus:outline-none focus:border-red-500"
+              className="bg-[#141414] border cursor-pointer border-[#333] rounded-lg px-4 py-3 focus:outline-none focus:border-red-500"
             />
           </div>
 
           {/* Checkbox + Button */}
-          <div className="flex items-center space-x-3 lg:col-span-2">
+          <div className="flex items-center space-x-3 lg:col-span-2 ">
             <input
               type="checkbox"
               name="agree"
               checked={formData.agree}
               onChange={handleChange}
-              className="w-5 h-5"
+              className="w-5 h-5 cursor-pointer"
             />
             <span className="text-sm text-[#999999]">
               I agree with Terms of Use and Privacy Policy
@@ -219,7 +219,7 @@ const Support = () => {
           <div className="lg:col-span-2 flex justify-end">
             <button
               type="submit"
-              className="bg-red-600 hover:bg-red-700 transition text-white px-6 py-3 rounded-lg"
+              className="bg-red-600 cursor-pointer hover:bg-red-700 transition text-white px-6 py-3 rounded-lg"
             >
               Send Message
             </button>

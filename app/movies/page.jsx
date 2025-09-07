@@ -362,7 +362,7 @@ const Movies = () => {
                     .getElementById("popularScroll")
                     .scrollBy({ left: -300, behavior: "smooth" })
                 }
-                className="px-6 py-3 m-2 rounded-sm text-lg  font-medium  text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
+                className="px-6 py-3 m-2 rounded-sm text-lg cursor-pointer font-medium  text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
               >
                 <IoChevronBackOutline size={20} />
               </button>
@@ -372,7 +372,7 @@ const Movies = () => {
                     .getElementById("popularScroll")
                     .scrollBy({ left: 300, behavior: "smooth" })
                 }
-                className="px-6 py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+                className="px-6 py-3 m-2 rounded-sm text-lg cursor-pointer font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
               >
                 <IoChevronForwardOutline size={20} />
               </button>
@@ -428,7 +428,7 @@ const Movies = () => {
                     .getElementById("upcomingScroll")
                     .scrollBy({ left: -300, behavior: "smooth" })
                 }
-                className="px-6 py-3 m-2 rounded-sm text-lg font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
+                className="px-6 py-3 m-2 rounded-sm text-lg cursor-pointer font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
               >
                 <IoChevronBackOutline size={20} />
               </button>
@@ -438,7 +438,7 @@ const Movies = () => {
                     .getElementById("upcomingScroll")
                     .scrollBy({ left: 300, behavior: "smooth" })
                 }
-                className="px-6 py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+                className="px-6 py-3 m-2 rounded-sm text-lg cursor-pointer font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
               >
                 <IoChevronForwardOutline size={20} />
               </button>
@@ -494,7 +494,7 @@ const Movies = () => {
                     .getElementById("topRatedScroll")
                     .scrollBy({ left: -300, behavior: "smooth" })
                 }
-                className="px-6 py-3 m-2 rounded-sm text-lg font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
+                className="px-6 py-3 m-2 rounded-sm text-lg cursor-pointer font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
               >
                 <IoChevronBackOutline size={20} />
               </button>
@@ -504,7 +504,7 @@ const Movies = () => {
                     .getElementById("topRatedScroll")
                     .scrollBy({ left: 300, behavior: "smooth" })
                 }
-                className="px-6 py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+                className="px-6 py-3 m-2 rounded-sm text-lg cursor-pointer font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
               >
                 <IoChevronForwardOutline size={20} />
               </button>
@@ -572,7 +572,7 @@ const Movies = () => {
                     .getElementById("popularScroll")
                     .scrollBy({ left: -300, behavior: "smooth" })
                 }
-                className="px-6 py-3 m-2 rounded-sm text-lg  font-medium  text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
+                className="px-6 py-3 m-2 rounded-sm text-lg cursor-pointer  font-medium  text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
               >
                 <IoChevronBackOutline size={20} />
               </button>
@@ -582,7 +582,7 @@ const Movies = () => {
                     .getElementById("popularScroll")
                     .scrollBy({ left: 300, behavior: "smooth" })
                 }
-                className="px-6 py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+                className="px-6 py-3 m-2 rounded-sm text-lg cursor-pointer font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
               >
                 <IoChevronForwardOutline size={20} />
               </button>
@@ -638,7 +638,7 @@ const Movies = () => {
                     .getElementById("upcomingScroll")
                     .scrollBy({ left: -300, behavior: "smooth" })
                 }
-                className="px-6 py-3 m-2 rounded-sm text-lg font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
+                className="px-6 py-3 m-2 rounded-sm text-lg cursor-pointer font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
               >
                 <IoChevronBackOutline size={20} />
               </button>
@@ -648,7 +648,7 @@ const Movies = () => {
                     .getElementById("upcomingScroll")
                     .scrollBy({ left: 300, behavior: "smooth" })
                 }
-                className="px-6 py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+                className="px-6 py-3 m-2 rounded-sm text-lg font-medium cursor-pointer bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
               >
                 <IoChevronForwardOutline size={20} />
               </button>
@@ -704,7 +704,7 @@ const Movies = () => {
                     .getElementById("topRatedScroll")
                     .scrollBy({ left: -300, behavior: "smooth" })
                 }
-                className="px-6 py-3 m-2 rounded-sm text-lg font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
+                className="px-6 py-3 m-2 rounded-sm cursor-pointer text-lg font-medium text-[#999999] bg-[#1a1a1a] hover:bg-[#333333] hover:text-white transition"
               >
                 <IoChevronBackOutline size={20} />
               </button>
@@ -714,7 +714,7 @@ const Movies = () => {
                     .getElementById("topRatedScroll")
                     .scrollBy({ left: 300, behavior: "smooth" })
                 }
-                className="px-6 py-3 m-2 rounded-sm text-lg font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
+                className="px-6 py-3 m-2 rounded-sm text-lg cursor-pointer font-medium bg-[#1a1a1a] text-[#999999] hover:bg-[#333333] hover:text-white transition"
               >
                 <IoChevronForwardOutline size={20} />
               </button>

@@ -3,7 +3,7 @@ import React from "react";
 const Subscription = () => {
   return (
     <main className="bg-[#141414] text-white min-h-screen px-6 lg:px-26 py-16">
-      <section className=" mx-aut mt-18">
+      <section id="plans" className=" mx-aut mt-18">
         <h1 className="text-3xl lg:text-4xl font-bold mb-4">
           Compare our plans and find the right one for you
         </h1>

@@ -10,7 +10,6 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-
 import React, { useState, useEffect } from "react";
 import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
 
@@ -173,9 +172,11 @@ const CategoriesAndDevices = () => {
             StreamVibe, you can enjoy a wide variety of content, including the
             latest blockbusters, classic movies, popular TV shows, and more.
           </p>
-          <button className="bg-red-600 hover:bg-red-700 text-white font-semibold sm:px-6 sm:py-4 px-4 py-4 rounded-lg text-xs sm:text-sm">
-            ▶ Start Watching Now
-          </button>
+          <Link href="/watch">
+            <button className="bg-red-600 cursor-pointer hover:bg-red-700 text-white font-semibold sm:px-6 sm:py-4 px-4 py-4 rounded-lg text-xs sm:text-sm">
+              ▶ Start Watching Now
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -300,18 +301,16 @@ const CategoriesAndDevices = () => {
           </div>
 
           <div>
-            <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-3 rounded-lg text-xl mb-12">
-              Ask a Question
-            </button>
+            <Link href="/ask">
+              <button className="bg-red-600 cursor-pointer hover:bg-red-700 text-white font-semibold px-4 py-3 rounded-lg text-xl mb-12">
+                Ask a Question
+              </button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             {faqs.map((faq, index) => (
-              <div
-                key={faq.number}
-                className="border-t border-[#660000] py-3 cursor-pointer"
-                onClick={() => toggleFaq(index)}
-              >
+              <div key={faq.number} className="border-t border-[#660000] py-3">
                 <div className="flex items-start justify-between gap-6">
                   <div className="flex items-center gap-6">
                     <div className="bg-[#1A1A1A] border border-[#262626] w-16 h-16 rounded-md flex items-center justify-center text-white text-xl">
@@ -319,7 +318,11 @@ const CategoriesAndDevices = () => {
                     </div>
                     <p className="text-xl font-medium">{faq.question}</p>
                   </div>
-                  <div className="text-xl">
+
+                  <div
+                    className="text-xl cursor-pointer select-none"
+                    onClick={() => toggleFaq(index)}
+                  >
                     {activeIndex === index ? "−" : "+"}
                   </div>
                 </div>
@@ -349,7 +352,7 @@ const CategoriesAndDevices = () => {
             <div className="flex items-center mt-8 md:mt-0 border border-[#333] rounded-lg overflow-hidden">
               <button
                 onClick={() => setBilling("Monthly")}
-                className={`px-6 py-3 m-3 rounded-md text-lg font-medium ${
+                className={`px-6 py-3 m-3 rounded-md text-lg font-medium cursor-pointer ${
                   billing === "Monthly"
                     ? "bg-[#333333] text-[#FFFFFF]"
                     : "bg-transparent text-[#999999]"
@@ -359,7 +362,7 @@ const CategoriesAndDevices = () => {
               </button>
               <button
                 onClick={() => setBilling("Yearly")}
-                className={`px-6 py-3 m-3 text-lg rounded-md font-medium ${
+                className={`px-6 py-3 m-3 text-lg rounded-md font-medium cursor-pointer ${
                   billing === "Yearly"
                     ? "bg-[#333333] text-[#FFFFFF]"
                     : "bg-transparent text-[#999999]"
@@ -394,10 +397,10 @@ const CategoriesAndDevices = () => {
                   </div>
                 </div>
                 <div className="mt-8">
-                  <button className="w-full bg-[#1F1F1F] hover:bg-[#333333] text-white px-6 py-3 rounded-lg border border-[#333]">
+                  <button className="w-full cursor-pointer bg-[#1F1F1F] hover:bg-[#333333] text-white px-6 py-3 rounded-lg border border-[#333]">
                     Start Free Trial
                   </button>
-                  <button className="w-full bg-red-600 hover:bg-red-700 mt-5 text-white px-8 py-3 rounded-lg font-semibold">
+                  <button className="w-full cursor-pointer bg-red-600 hover:bg-red-700 mt-5 text-white px-8 py-3 rounded-lg font-semibold">
                     Choose Plan
                   </button>
                 </div>
@@ -411,7 +414,7 @@ const CategoriesAndDevices = () => {
           className="relative bg-cover bg-center bg-no-repeat py-20 px-10 rounded-lg items-center justify-between max-w-7xl mx-auto border border-[#262626]"
           style={{
             backgroundImage: "url('/images/logo/Sub.png')",
-            minHeight: "400px", // kifayət qədər hündürlük
+            minHeight: "400px",
           }}
         >
           {/* Overlay */}

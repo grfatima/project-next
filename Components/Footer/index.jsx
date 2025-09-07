@@ -93,13 +93,8 @@ const Footer = () => {
           <h3 className="text-white font-semibold mb-4">Subscription</h3>
           <ul className="space-y-2 text-sm text-[#999999]">
             <li>
-              <Link href="/plans" className="hover:underline">
+              <Link href="/subscriptions#plans" className="hover:underline">
                 Plans
-              </Link>
-            </li>
-            <li>
-              <Link href="/subscribe" className="hover:underline">
-                Features
               </Link>
             </li>
           </ul>
@@ -153,15 +148,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto border-t border-[#999999] pt-6 flex flex-col md:flex-row justify-between text-xs text-[#999999]">
         <p>©2023 StreamVib, All Rights Reserved</p>
         <div className="flex space-x-6 mt-2 md:mt-0">
-          <Link href="/terms" className="hover:underline">
-            Terms of Use
-          </Link>
-          <Link href="/privacy" className="hover:underline">
-            Privacy Policy
-          </Link>
-          <Link href="/cookies" className="hover:underline">
-            Cookie Policy
-          </Link>
+          <a className="hover:underline">Terms of Use</a>
+          <a className="hover:underline">Privacy Policy</a>
+          <a className="hover:underline">Cookie Policy</a>
         </div>
       </div>
     </footer>

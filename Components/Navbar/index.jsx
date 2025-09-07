@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { usePathname } from "next/navigation";
 import { IoSearchSharp } from "react-icons/io5";
+import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,16 +56,16 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Links */}
-      <div className="hidden md:flex items-center bg-[#0F0F0F] rounded-xl border border-[#1F1F1F] text-white px-4 py-2 space-x-2">
+      <div className="hidden md:flex items-center bg-[#0F0F0F] rounded-xl border-2 border-[#1F1F1F] text-white px-3 py-3 space-x-2">
         {links.map((link, idx) => {
           const isActive = pathname === link.href;
           return (
             <Link
               key={idx}
               href={link.href}
-              className={`px-4 py-2 rounded-lg transition-colors duration-300 ${
+              className={`px-4 py-3 rounded-lg transition-colors duration-300 ${
                 isActive
-                  ? "bg-[#1A1A1A] border border-[#333333] text-white"
+                  ? "bg-[#1A1A1A] text-white"
                   : "text-[#BFBFBF] hover:text-white hover:bg-[#1A1A1A]"
               }`}
             >
@@ -77,7 +77,9 @@ const Navbar = () => {
 
       {/* Icons */}
       <div className="flex items-center space-x-4 md:space-x-6">
-        <IoSearchSharp className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 transition-transform" />
+        <Link href="/search">
+          <IoSearchSharp className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 transition-transform" />
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
