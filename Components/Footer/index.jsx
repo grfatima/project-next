@@ -99,7 +99,7 @@ const Footer = () => {
             </li>
             <li>
               <Link href="/subscribe" className="hover:underline">
-                Subscribe
+                Features
               </Link>
             </li>
           </ul>

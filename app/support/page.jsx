@@ -123,10 +123,10 @@ const Support = () => {
       {/* Section 2 - Form */}
       <section
         id="contact"
-        className="bg-[#141414] border border-[#262626]  rounded-2xl px-10 lg:mx-16 py-20 mx-auto"
+        className="bg-[#141414] border border-[#262626]  rounded-lg px-10 lg:mx-16 py-20 mx-auto"
       >
         <form
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6 space-y-10"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 space-y-10 "
           onSubmit={handleSubmit}
         >
           {/* First Name */}
@@ -226,6 +226,31 @@ const Support = () => {
           </div>
         </form>
       </section>
+
+      {/* Free Trial Section */}
+      <div className=" px-9 lg:px-16 mt-20">
+        <section
+          className="relative bg-cover bg-center bg-no-repeat py-20 px-10 rounded-lg items-center justify-between max-w-7xl mx-auto border-1 border-[#262626]"
+          style={{
+            backgroundImage: "url('/images/logo/Sub.png')",
+            minHeight: "300px",
+          }}
+        >
+          <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+          <div className="relative max-w-4xl text-white">
+            <h2 className="text-4xl font-bold mb-6">
+              Start your free trial today!
+            </h2>
+            <p className="text-lg text-[#999999] max-w-3xl">
+              This is a clear and concise call to action that encourages users
+              to sign up for a free trial of StreamVibe.
+            </p>
+          </div>
+          <button className="relative cursor-pointer bg-red-600 mt-8 hover:bg-red-700 text-white font-semibold px-6 py-3 text-xl rounded-md shadow-lg transition">
+            Start a Free Trial
+          </button>
+        </section>
+      </div>
     </main>
   );
 };
