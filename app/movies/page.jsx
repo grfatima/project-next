@@ -350,7 +350,7 @@ const Movies = () => {
         </div>
 
         {/* Popular Section */}
-        <section className="mb-25 mt-10">
+        <section id="popular" className="mb-25 mt-10">
           <div className="flex items-center justify-between mb-8 px-4">
             <h2 className="text-3xl font-semibold mb-5">Popular</h2>
 
@@ -416,7 +416,7 @@ const Movies = () => {
         </section>
 
         {/* Upcoming Section */}
-        <section className="mb-25">
+        <section id="upcoming" className="mb-25">
           <div className="flex items-center justify-between mb-8 px-4">
             <h2 className="text-3xl font-semibold mb-5">Upcoming</h2>
 
@@ -482,7 +482,7 @@ const Movies = () => {
         </section>
 
         {/* Top Rated Section */}
-        <section className="mb-5">
+        <section id="topRated" className="mb-5">
           <div className="flex items-center justify-between mb-8 px-4">
             <h2 className="text-3xl font-semibold mb-5">Top Rated</h2>
 
@@ -560,7 +560,7 @@ const Movies = () => {
         </div>
 
         {/* Popular Section */}
-        <section className="mb-25 mt-10">
+        <section id="popular1" className="mb-25 mt-10">
           <div className="flex items-center justify-between mb-8 px-4">
             <h2 className="text-3xl font-semibold mb-5">Popular</h2>
 
@@ -626,7 +626,7 @@ const Movies = () => {
         </section>
 
         {/* On The Air Section */}
-        <section className="mb-25">
+        <section id="onTheAir" className="mb-25">
           <div className="flex items-center justify-between mb-8 px-4">
             <h2 className="text-3xl font-semibold mb-5">On The Air</h2>
 
@@ -692,7 +692,7 @@ const Movies = () => {
         </section>
 
         {/* Top Rated Section */}
-        <section className="mb-5">
+        <section id="topRated1" className="mb-5">
           <div className="flex items-center justify-between mb-8 px-4">
             <h2 className="text-3xl font-semibold mb-5">Top Rated</h2>
 
@@ -777,7 +777,7 @@ const Movies = () => {
               to sign up for a free trial of StreamVibe.
             </p>
           </div>
-          <button className="relative bg-red-600 mt-8 hover:bg-red-700 text-white font-semibold px-6 py-3 text-xl rounded-md shadow-lg transition">
+          <button className="relative cursor-pointer bg-red-600 mt-8 hover:bg-red-700 text-white font-semibold px-6 py-3 text-xl rounded-md shadow-lg transition">
             Start a Free Trial
           </button>
         </section>

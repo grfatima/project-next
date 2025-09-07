@@ -181,7 +181,7 @@ const CategoriesAndDevices = () => {
 
       <div className="px-6 lg:px-[100px] py-16 bg-[#141414] text-white">
         {/* Categories Section */}
-        <section className="mb-30 mt-10">
+        <section id="categories" className="mb-30 mt-10 ">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-15 gap-4">
             <div className="flex-1">
               <h2 className="text-3xl lg:text-4xl font-bold">
@@ -261,7 +261,7 @@ const CategoriesAndDevices = () => {
         </section>
 
         {/* Devices Section */}
-        <section className="mb-28">
+        <section id="devices" className="mb-28">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             We Provide you streaming experience across various devices.
           </h2>
@@ -288,7 +288,7 @@ const CategoriesAndDevices = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="mb-28">
+        <section id="faq" className="mb-28">
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Frequently Asked Questions
@@ -334,7 +334,7 @@ const CategoriesAndDevices = () => {
         </section>
 
         {/* Plans Section */}
-        <section className="mb-28">
+        <section id="plans" className="mb-28">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -411,22 +411,26 @@ const CategoriesAndDevices = () => {
           className="relative bg-cover bg-center bg-no-repeat py-20 px-10 rounded-lg items-center justify-between max-w-7xl mx-auto border border-[#262626]"
           style={{
             backgroundImage: "url('/images/logo/Sub.png')",
-            minHeight: "300px",
+            minHeight: "400px", // kifayət qədər hündürlük
           }}
         >
-          <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-          <div className="relative max-w-4xl text-white">
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/60 rounded-lg"></div>
+
+          {/* Content */}
+          <div className="relative z-10 max-w-3xl text-white">
             <h2 className="text-4xl font-bold mb-6">
               Start your free trial today!
             </h2>
-            <p className="text-lg text-[#999999] max-w-3xl">
+            <p className="text-lg text-[#cccccc] max-w-2xl">
               This is a clear and concise call to action that encourages users
               to sign up for a free trial of StreamVibe.
             </p>
+
+            <button className="mt-8 cursor-pointer bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 text-xl rounded-md shadow-lg transition">
+              Start a Free Trial
+            </button>
           </div>
-          <button className="relative bg-red-600 mt-8 hover:bg-red-700 text-white font-semibold px-6 py-3 text-xl rounded-md shadow-lg transition">
-            Start a Free Trial
-          </button>
         </section>
       </div>
     </div>

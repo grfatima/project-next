@@ -10,22 +10,22 @@ const Footer = () => {
           <h3 className="text-white font-semibold mb-4">Home</h3>
           <ul className="space-y-2 text-sm text-[#999999]">
             <li>
-              <Link href="/categories" className="hover:underline">
+              <Link href="/#categories" className="hover:underline">
                 Categories
               </Link>
             </li>
             <li>
-              <Link href="/devices" className="hover:underline">
+              <Link href="/#devices" className="hover:underline">
                 Devices
               </Link>
             </li>
             <li>
-              <Link href="/pricing" className="hover:underline">
-                Pricing
+              <Link href="/#plans" className="hover:underline">
+                Plans
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="hover:underline">
+              <Link href="/#faq" className="hover:underline">
                 FAQ
               </Link>
             </li>
@@ -37,23 +37,18 @@ const Footer = () => {
           <h3 className="text-white font-semibold mb-4">Movies</h3>
           <ul className="space-y-2 text-sm text-[#999999]">
             <li>
-              <Link href="/genres" className="hover:underline">
-                Genres
-              </Link>
-            </li>
-            <li>
-              <Link href="/trending" className="hover:underline">
-                Trending
-              </Link>
-            </li>
-            <li>
-              <Link href="/new-release" className="hover:underline">
-                New Release
-              </Link>
-            </li>
-            <li>
-              <Link href="/popular" className="hover:underline">
+              <Link href="/movies#popular" className="hover:underline">
                 Popular
+              </Link>
+            </li>
+            <li>
+              <Link href="/movies#upcoming" className="hover:underline">
+                Upcoming
+              </Link>
+            </li>
+            <li>
+              <Link href="/movies#topRated" className="hover:underline">
+                Top Rated
               </Link>
             </li>
           </ul>
@@ -64,23 +59,18 @@ const Footer = () => {
           <h3 className="text-white font-semibold mb-4">Shows</h3>
           <ul className="space-y-2 text-sm text-[#999999]">
             <li>
-              <Link href="/shows/genres" className="hover:underline">
-                Genres
-              </Link>
-            </li>
-            <li>
-              <Link href="/shows/trending" className="hover:underline">
-                Trending
-              </Link>
-            </li>
-            <li>
-              <Link href="/shows/new" className="hover:underline">
-                New Release
-              </Link>
-            </li>
-            <li>
-              <Link href="/shows/popular" className="hover:underline">
+              <Link href="/movies#popular1" className="hover:underline">
                 Popular
+              </Link>
+            </li>
+            <li>
+              <Link href="/movies#onTheAir" className="hover:underline">
+                On The Air
+              </Link>
+            </li>
+            <li>
+              <Link href="/movies#topRated1" className="hover:underline">
+                Top Rated
               </Link>
             </li>
           </ul>
@@ -91,7 +81,7 @@ const Footer = () => {
           <h3 className="text-white font-semibold mb-4">Support</h3>
           <ul className="space-y-2 text-sm text-[#999999]">
             <li>
-              <Link href="/contact" className="hover:underline">
+              <Link href="/support#contact" className="hover:underline">
                 Contact Us
               </Link>
             </li>
